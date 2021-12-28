@@ -11,7 +11,7 @@ max_inch = int(input("Enter the maximum  number of inches (not greater than 11):
 """ Process and output """
 inches_to_metres = 0
 
-# for inches
+# Displaying inches
 print("Inches: ", end="")
 
 for inch in range(min_inch, max_inch+1):
@@ -20,7 +20,7 @@ for inch in range(min_inch, max_inch+1):
 
 print()
 
-# for metres
+# Displaying metres
 print("Metres: ", end="")
 
 for inch in range(min_inch, max_inch+1):

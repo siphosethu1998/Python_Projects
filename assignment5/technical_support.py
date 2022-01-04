@@ -17,8 +17,8 @@ def default_response():
     
 def get_response(words):
     for word in words:
-        if not word in responses:
-            return word
+        if word in responses:
+            return responses[word]
     return default_response()
     
 
@@ -28,15 +28,15 @@ def print_welcome():
 
 
 def get_input():
-    query = input().split(' ')
+    query = input().lower().split(' ')
     return query
 
 def main():
     print_welcome()
     query = get_input()
-    while query==['Quit']:
+    while query!=['quit']:
         response=get_response(query)
         print(response)
-        question=get_input()
+        query=get_input()
         
-    
+main()

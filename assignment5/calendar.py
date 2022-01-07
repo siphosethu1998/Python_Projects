@@ -1,4 +1,4 @@
-import calendar_utils
+import calutils
 
 def to_string(n, e):
         if n<1 or n>e:
@@ -15,15 +15,15 @@ def row(i, s, e):
 
 def row_of_months(i, start_month, year):
         
-        start_day=(calendar_utils.first_day_of_month(start_month, year)-1)%7
-        days=calendar_utils.days_in_month(start_month, year)
+        start_day=(calutils.first_day_of_month(start_month, year)-1)%7
+        days=calutils.days_in_month(start_month, year)
         
         result=row(i, 1-start_day, days)
 
         for month in range(start_month+1, start_month+3):
                 result+='   '
                 start_day=(start_day+days)%7
-                days=calendar_utils.days_in_month(month, year)
+                days=calutils.days_in_month(month, year)
                 result+=row(i, 1-start_day, days)
 
         return result
@@ -32,7 +32,7 @@ def print_year(year):
         print('{0:^69}'.format(year))
         
 def print_month_names(start_month):
-        print('{0:^20}   {1:^20}   {2:^20}'.format(calendar_utils.month_name(start_month), calendar_utils.month_name(start_month+1), calendar_utils.month_name(start_month+2)).title())
+        print('{0:^20}   {1:^20}   {2:^20}'.format(calutils.month_name(start_month), calutils.month_name(start_month+1), calutils.month_name(start_month+2)).title())
 
 def print_month_days():
         week='Mo Tu We Th Fr Sa Su'

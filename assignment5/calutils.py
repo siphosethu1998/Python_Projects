@@ -58,12 +58,3 @@ def first_day_of_month(month_number, year):
         first_day_list.append((first_day_list[index] + days_in_month(index+1, year))%7)
 
     return first_day_list[month_number-1]
-
-
-def main():
-
-    print(first_day_of_month(3,2022))
-
-main()
-    
-

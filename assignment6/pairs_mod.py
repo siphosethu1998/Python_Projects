@@ -6,12 +6,13 @@
 """
 
 def count_pairs(s):
-    if len(s) < 2:
+    if len(s) < 2: # base case
         return 0
-    elif s[0] == s[1]:
-        return 1 + count_pairs(s[2:])
-    else:
-        return count_pairs(s[2:])
+    else: # recurse
+        if s[0] == s[1]: 
+            return 1 + count_pairs(s[2:])
+        else:
+            return count_pairs(s[2:])
 
 # main method is for testing purposes
 def main():

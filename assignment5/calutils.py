@@ -7,10 +7,12 @@
 def is_leap_year(year):
     # Given a year (a 4 digit number), returns true if it is a leap year, and false otherwise. 
 
-    if year%4 == 0 or year%100 == 0 and year%400: 
+    if year%4 == 0 :
         return True
-    else:
-        return False
+        if year%100 == 0:
+            return False 
+            if year%400 == 0:
+                return True
     
 
 def month_name(number):

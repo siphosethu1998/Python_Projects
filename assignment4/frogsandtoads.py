@@ -114,14 +114,6 @@ while True:
     if frogs_one_side == True and toads_one_side == True:
         print("Congratulations, you've won!")
         break
-                
-    # checking for the state where no moves can be made and ending game
-        # for space at the beginning
-         # check if toad can jump over the frog
-         # if can't then game over
-        # for space at the end
-         # check if the frog can jump over the toad
-         # then if it can't then game over
 
     if state[0] == "":
         if state[1] == "Frog" and state[2] == "Frog":

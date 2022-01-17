@@ -30,7 +30,6 @@ def move(state, index):
     """ Return the new state, S’, produced by moving the frog or toad at the given index """
     
     newState = list(state)
-    print(newState)
 
     if is_frog(newState,index):
 
@@ -96,8 +95,9 @@ def is_win(state):
     return False
 
 # the main method is just for testing
+"""
 def main():
     print(is_win(["Toad","Toad", "","Frog","Frog"]))
 
 main()
-
+"""

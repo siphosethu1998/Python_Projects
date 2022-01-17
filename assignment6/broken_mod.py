@@ -1,6 +1,6 @@
 import string
 
-def palindrome (s):
+def palindrome(s):
    if len(s) == 1:
       return s.isalpha()
    elif s[0] in string.punctuation or s[0] in string.whitespace:

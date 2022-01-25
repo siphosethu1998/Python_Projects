@@ -1,4 +1,6 @@
 # leader_board.py
+# Siphosethu Shumani
+# Date : 25 Jan 2022
 
 def process_line(line):
     parts = line.split(' ')
@@ -29,16 +31,29 @@ def output(entries):
         print('{:14} | {:.6}'.format(entry[0], entry[2]))
               
 def main():
-    file_name = input('Enter the name of the file:\n')
-    file_input = open(file_name, 'r')
-    
-    entries = []
-    for line in file_input:
-        entries.append(process_line(line))
-    file_input.close()
-    
-    entries = sort(entries)
-    output(entries)
-    
+    try:
+        file_name = input('Enter the name of the file:\n')
+        file_input = open(file_name, 'r')
+        
+    except IOError:
+        print("Could not find the specified file.")
+        file_name = input('Enter the correct file name: \n')
+    finally:
+        counter = 0
+        file_input = open(file_name, 'r')
+        entries = []
+        for line in file_input:
+            counter += 1
+            try:
+                entries.append(process_line(line))
+            except ValueError as val_err:
+                print(f"{val_err} has occured in line {counter}")
+                print(line, end="")
+                print("The correct format is : <name of test subject> <number of trials> <average> \n") 
+        file_input.close()
+        
+        entries = sort(entries)
+        output(entries)
+        
 main()
     

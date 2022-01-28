@@ -1,0 +1,22 @@
+"""
+    Author : Siphosethu Shumani
+    Date : 28 Jan 2022
+"""
+
+class Appointment:
+    def __init__(self, patient_id, doctor_id, time_stamp, memo):
+        self.patient_id = patient_id
+        self.doctor_id = doctor_id
+        self.time_stamp = time_stamp
+        self.memo = memo
+
+    def __str__(self):
+        return str(self.patient_id) + ", " + str(self.doctor_id) + ", " + str(self.time_stamp) + ", " +  self.memo
+
+# the main method is only for testing the Appointment class
+def main():
+    a = Appointment(12, 34, "10:30", "Teeth removal")
+    print(a)
+
+main()
+        

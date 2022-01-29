@@ -11,12 +11,5 @@ class Appointment:
         self.memo = memo
 
     def __str__(self):
-        return str(self.patient_id) + ", " + str(self.doctor_id) + ", " + str(self.time_stamp) + ", " +  self.memo
-
-# the main method is only for testing the Appointment class
-def main():
-    a = Appointment(12, 34, "10:30", "Teeth removal")
-    print(a)
-
-main()
+        return "Patient's ID: "+str(self.patient_id) + "\nDoctor's ID: " + str(self.doctor_id) + "\nFull timestamp: " + str(self.time_stamp) + "\nMemo: " + self.memo
         

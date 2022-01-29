@@ -21,12 +21,4 @@ class Patient(Person):
         return self.name + ', ' + str(self.age) + ", " + str(self.patient_id) + ", " + self.address +  ", " + str(self.num_visits)
 
 
-# the main method is just for testing the patient class
-def main():
-    p = Patient(1234, "30 Avenue street", 4,"Sipho", 24,)
-    print(p)
-    p.display()
-    print(f"Your medical fees are R{p.calculate_fees()}")
-
-main()
 

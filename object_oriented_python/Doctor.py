@@ -20,11 +20,3 @@ class Doctor(Person):
     def __str__(self):
         return self.name + ', ' + str(self.age) + ", " + str(self.doctor_id) + ", " + self.address
 
-
-# main method is for testing the Doctor Class
-def main():
-    d = Doctor(98765, "30 avenue", "John", 35)
-    print(d)
-    d.display()
-
-main()
